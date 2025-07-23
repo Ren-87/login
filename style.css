@@ -304,3 +304,17 @@ body {
     margin-bottom: 10px;
   }
 }
+
+@media (max-width: 767px) {
+  /* CSS للجوال */
+}
+
+/* التابلت: من 768px إلى 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* CSS للتابلت */
+}
+
+/* الكمبيوتر: 1024px وفوق */
+@media (min-width: 1024px) {
+  /* CSS للكمبيوتر */
+}
