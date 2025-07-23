@@ -12,7 +12,10 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   margin-top: 15vh;
+  scroll-behavior: smooth;
 }
+
+
 .head {
   position: fixed;
   top: 0;
@@ -28,28 +31,14 @@ body {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   direction: ltr;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /*jj*/
-  
-}
-.ren{
-     width: 50%;
-    display: flex;
-  justify-content:space-around;
-  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.hav {
+.ren {
+  width: 50%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 25px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.head li a.active {
-  color: #0077b6; 
-  font-weight: bold;
 }
 
 .head li {
@@ -62,6 +51,11 @@ body {
   font-weight: bold;
 }
 
+.head li a.active {
+  color: #0077b6; 
+  font-weight: bold;
+}
+
 .follow-btn {
   background-color: #9cc3dd;
   color: #4f4f4f;
@@ -71,6 +65,13 @@ body {
   height: 40px;
   width: 90px;
   cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.follow-btn:hover {
+  background-color: #ffffff;
+  transform: translateY(-4px);
 }
 
 .name-icon {
@@ -79,6 +80,7 @@ body {
   gap: 8px;
   font-weight: bold;
 }
+
 .diamond {
   width: 10px;
   height: 10px;
@@ -89,34 +91,32 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.intro-wrapper {
+/* المقدمة */
+.intro-section {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin-top: 220px;
   gap: 40px;
-  margin-top: 60px;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  margin-bottom: 0px;
 }
 
 .avatar-wrapper {
   position: relative;
   width: 17%;
-   min-width: 200px;
+  min-width: 200px;
   max-width: 300px;
-  
 }
+
 .main-avatar {
   width: 100%;
   border-radius: 50%;
   display: block;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.text-content {
-  margin-left: 0;
-  margin-top: 20px;
-  padding: 0 20px;
-  text-align: center;
-}
+
 .mini-avatar {
   position: absolute;
   width: 60px;
@@ -127,88 +127,26 @@ body {
   background-color: white;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-.intro-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-  margin-top: 150px;
-  gap: 40px;
-  flex-wrap: wrap;
-}
 .text-content {
   flex: 1;
   max-width: 500px;
   text-align: right;
-  
- 
 }
 
 .text-content h1 {
   font-size: 28px;
   margin-bottom: 15px;
- 
-  
 }
 
 .text-content p {
   line-height: 1.8;
   font-size: 16px;
   color: #555555;
-  flex: 1 1 400px;
-  max-width: 380px;
-
-}
-.follow-btn {
-  background-color: #9cc3dd;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 18px;
-  font-size: medium;
-  color: #4f4f4f;
-  cursor: pointer;
-  font-family: 'Cairo', sans-serif;
-  transition: 0.3s ease-in-out;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
 }
 
-.follow-btn:hover {
-  background-color: #ffffff;
-  transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-.intro-text {
-  max-width: 500px;
-}
-.intro-text h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-.intro-text p {
-  font-size: 16px;
-  color: #444;
-  line-height: 1.7;
-}
-
-
-
-.work-summary {
-    height: 20vh;
-    width: 20%;
-  flex: 1 1 400px;
-  max-width: 500px;
-
-
-}
-
-.work-summary h1 {
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-.work-summary p {
-  color: #565656;
-}
-
+/* نبذة عني + المهارات */
 .info-row {
   display: flex;
   flex-direction: column;
@@ -216,26 +154,28 @@ body {
   justify-content: center;
   text-align: center;
   gap: 40px;
-  margin-top: 150px;
+  margin-top: 50px !important;
 }
 
-.skills-section,
-.work-summary {
+.work-summary,
+.skills-section {
   width: 100%;
   max-width: 700px;
+  text-align: right;
+    margin-top: 300px;
 }
 
-.skills-section {
-  text-align:right;
-   margin-top: 1x;
-   margin-top: 100px;
+.work-summary h1 {
+  margin-bottom: 20px;
+  font-weight: bold;
+  margin-top: 0px;
+   
 }
 
-.work-summary {
-  text-align:right;
-}
 .work-summary p {
-  color: #555555 !important;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.8;
 }
 
 
@@ -243,44 +183,37 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 20px; 
+  margin-top: 20px;
 }
-
 
 .tag {
   background-color: #a6c8df;
   color: #333;
   border-radius: 20px;
   font-size: 14px;
-  display: inline-block;
-  margin: 4px;
+  padding: 0 15px;
   height: 30px;
   line-height: 30px;
-  padding-inline: 15px;
-    font-family: 'Cairo', sans-serif;
-  transition: 0.3s ease-in-out;
+  font-family: 'Cairo', sans-serif;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  
+  transition: 0.3s;
 }
-.work-summary p {
-  font-size: 15px;
-  color: #444;
-  line-height: 1.8;
-}
+
+/* المكتسبات */
 .projects-title {
   text-align: center;
   font-size: 24px;
-  margin-top: 300px;
+  margin-top: 250px;
   margin-bottom: 20px;
   font-weight: bold;
+  margin-top: 400px;
 }
-
 
 .projects {
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin: 50px auto;
+  margin: 50px auto 100px;
 }
 
 .box {
@@ -295,12 +228,6 @@ body {
   transition: transform 0.3s ease;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-.box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-}
 
 .box img {
   width: 100%;
@@ -308,52 +235,12 @@ body {
   object-fit: cover;
   border-radius: 10px;
 }
+
 .box:hover {
   transform: translateY(-8px);
   background-color: #d6ecf6;
 }
-html {
-  scroll-behavior: smooth;
-}
-#about {
-  scroll-margin-top: 100px; /
-}
-.projects.expanded .box {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
-}
-.box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
 
-
-.projects.expanded .box {
-  transform: scale(1.1);
-}
-
-.projects.expanded .box img {
-  transform: scale(1.2);
-}
-#about-section.expanded .skills,
-#about-section.expanded .work-summary {
-  transform: scale(1.05);
-  transition: 0.3s ease;
-}
-
-#about-section.expanded .skills {
-  gap: 15px;
-}
-
-#about-section.expanded .tag {
-  font-size: 15px;
-  padding-inline: 20px;
-}
-html {
-  scroll-behavior: smooth;
-}
 
 #about,
 #skills,
@@ -361,12 +248,6 @@ html {
   scroll-margin-top: 150px; 
 }
 
-#about.expanded,
-#skills.expanded,
-#projects.expanded {
-  transform: scale(1.05);
-  transition: transform 0.4s ease;
-}
 .expanded {
   transform: scale(1.08);
   transition: transform 0.4s ease, font-size 0.4s ease;
@@ -380,45 +261,8 @@ html {
 #projects-title.expanded {
   font-size: 1.2em;
 }
-.head li a.clicked {
-  background-color: #0077b6;
-  color: #fff;
-  border-radius: 8px;
-  padding: 5px 10px;
-  transition: background-color 0.3s;
-}
 
 
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .main-content {
-    margin-top: 30px;
-    padding: 0 20px;
-  }
-
-  .avatar {
-    width: 60%;
-    height: 25vh;
-  }
-
-  .login-box {
-    width: 100%;
-    max-width: 320px;
-  }
-
-  .welcome-text h2 {
-    font-size: 20px;
-  }
-
-  .login-button {
-    font-size: 15px;
-    padding: 10px 20px;
-  }
-}
 @media (max-width: 768px) {
   .head {
     flex-direction: column; 
@@ -430,15 +274,27 @@ html {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-top: 180px;
   }
 
   .avatar-wrapper img {
     width: 150px; 
   }
 
-  .login-box {
-    width: 90%;
-    margin: 0 auto;
+  .text-content {
+    max-width: 90%;
+  }
+
+  .text-content h1 {
+    font-size: 22px;
+  }
+
+  .text-content p {
+    font-size: 15px;
+  }
+
+  .projects-title {
+    font-size: 20px;
   }
 
   ul.head li {
