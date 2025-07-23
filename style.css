@@ -265,56 +265,18 @@ body {
 }
 
 
-@media (max-width: 768px) {
-  .head {
-    flex-direction: column; 
-    align-items: center;
-    text-align: center;
-  }
-
-  .intro-section {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 180px;
-  }
-
-  .avatar-wrapper img {
-    width: 150px; 
-  }
-
-  .text-content {
-    max-width: 90%;
-  }
-
-  .text-content h1 {
-    font-size: 22px;
-  }
-
-  .text-content p {
-    font-size: 15px;
-  }
-
-  .projects-title {
-    font-size: 20px;
-  }
-
-  ul.head li {
-    display: block;
-    margin-bottom: 10px;
-  }
-}
 
 @media (max-width: 767px) {
-  /* CSS للجوال */
+
 }
 
-/* التابلت: من 768px إلى 1023px */
+
 @media (min-width: 768px) and (max-width: 1023px) {
-  /* CSS للتابلت */
+
 }
 
-/* الكمبيوتر: 1024px وفوق */
+
 @media (min-width: 1024px) {
-  /* CSS للكمبيوتر */
+
 }
+@media (max-width: 480px) {}
