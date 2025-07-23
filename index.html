@@ -184,6 +184,7 @@ body {
       text-decoration: underline;
       
     }
+    
   </style>
 </head>
 <body>
@@ -215,14 +216,24 @@ body {
       <input type="password" id="password" placeholder="ادخل كلمة المرور">
 
       <div class="forgot-password">هل نسيت كلمة المرور؟</div>
-
-      <button class="login-button" onclick="window.location.href='renad.html'">تسجيل الدخول</button>
-
+      <button class="login-button" onclick="validateLogin()">تسجيل الدخول</button>
       <div class="signup-text">لا تمتلك حساباً؟ <a href="#">سجل الآن</a></div>
     </div>
   </div>
 <p style="text-align: center; font-size: 14px; color: #444; margin-top: 30px;">
   © جميع الحقوق محفوظة لرناد العلي.
 </p>
+<script>
+  function validateLogin() {
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
+
+    if (username === '' || password === '') {
+      alert('الرجاء إدخال اسم المستخدم وكلمة المرور');
+    } else {
+      window.location.href = 'renad.html';
+    }
+  }
+</script>
 </body>
 </html>
